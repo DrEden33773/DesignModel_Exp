@@ -9,7 +9,7 @@
  *
  */
 
-#include "Creational/AbstractFactory/CrossPlatformGUI/Demo.hpp"
+#include "demo/GUI_Demo.hpp"
 
 int main(int argc, char** argv) {
     GUI::Demo();
