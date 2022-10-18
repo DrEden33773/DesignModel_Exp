@@ -22,6 +22,7 @@ private:
     CheckBox* checkbox = nullptr;
 
 public:
+    Application() = delete;
     ~Application() {
         delete button;
         delete checkbox;

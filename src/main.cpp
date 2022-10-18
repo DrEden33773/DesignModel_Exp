@@ -9,8 +9,10 @@
  *
  */
 
+#include "demo/Furniture_Demo.hpp"
 #include "demo/GUI_Demo.hpp"
 
 int main(int argc, char** argv) {
     GUI::Demo();
+    Furniture::Demo();
 }

@@ -21,17 +21,17 @@ class GUIFactory {
 public:
     virtual ~GUIFactory() = default;
 
-    [[nodiscard]] virtual GUI::Button*   CreateButton() const   = 0;
-    [[nodiscard]] virtual GUI::CheckBox* CreateCheckBox() const = 0;
+    [[nodiscard]] virtual Button*   CreateButton() const   = 0;
+    [[nodiscard]] virtual CheckBox* CreateCheckBox() const = 0;
 };
 
 class WinFactory : public GUIFactory {
 public:
-    [[nodiscard]] GUI::Button* CreateButton() const override {
+    [[nodiscard]] Button* CreateButton() const override {
         Button* res = new WinButton();
         return res;
     }
-    [[nodiscard]] GUI::CheckBox* CreateCheckBox() const override {
+    [[nodiscard]] CheckBox* CreateCheckBox() const override {
         CheckBox* res = new WinCheckBox();
         return res;
     }
@@ -39,11 +39,11 @@ public:
 
 class MacFactory : public GUIFactory {
 public:
-    [[nodiscard]] GUI::Button* CreateButton() const override {
+    [[nodiscard]] Button* CreateButton() const override {
         Button* res = new MacButton();
         return res;
     }
-    [[nodiscard]] GUI::CheckBox* CreateCheckBox() const override {
+    [[nodiscard]] CheckBox* CreateCheckBox() const override {
         CheckBox* res = new MacCheckBox();
         return res;
     }
