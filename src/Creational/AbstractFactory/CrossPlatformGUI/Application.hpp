@@ -44,6 +44,18 @@ public:
         return button->return_type();
     }
 
+    /**
+     * @brief @b InitApplication @p => @b must_return_ptr
+     * @note
+            @b Why should we @p return @b pointer
+            @b Because @e MSVC @p doesn't @p impl @e RVO_protocol
+            @b then you have to face @b double_deleting
+                @b exapmle:
+                    @p return @b app: Application
+                    @e this will @p cause @b deleting @e app
+     * @param type
+     * @return Application*
+     */
     static Application* InitApplication(SystemType type = SystemType::Win) {
         GUIFactory*  factory = nullptr;
         Application* app     = nullptr;
