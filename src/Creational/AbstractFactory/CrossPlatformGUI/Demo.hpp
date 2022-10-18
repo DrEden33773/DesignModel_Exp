@@ -15,8 +15,9 @@
 namespace GUI {
 
 void Demo() {
-    Application running_app = Application::InitApplication();
-    running_app.paint();
+    auto running_app = Application::InitApplication();
+    running_app->paint();
+    delete running_app;
 }
 
 } // namespace GUI

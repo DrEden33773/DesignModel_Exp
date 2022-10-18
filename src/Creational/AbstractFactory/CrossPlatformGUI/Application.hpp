@@ -25,7 +25,8 @@ public:
     ~Application() {
         delete button;
         delete checkbox;
-    }
+    };
+
     enum class SystemType : unsigned short {
         Win = 0,
         Mac = 1,
@@ -43,14 +44,15 @@ public:
         return button->return_type();
     }
 
-    static Application InitApplication(SystemType type = SystemType::Win) {
-        GUIFactory* factory = nullptr;
+    static Application* InitApplication(SystemType type = SystemType::Win) {
+        GUIFactory*  factory = nullptr;
+        Application* app     = nullptr;
         if (type == SystemType::Win) {
             factory = new WinFactory();
         } else {
             factory = new MacFactory();
         }
-        Application app(factory);
+        app = new Application(factory);
         delete factory;
         return app;
     }
