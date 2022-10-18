@@ -1,6 +1,18 @@
 [
-{
-  "directory": "e:\\CollegeLearningRepo\\DesignModel_Exp",
-  "arguments": ["clang.exe", "-c", "-Qunused-arguments", "-m32", "-g", "-O0", "-std=gnu++20", "-o", "build\\.objs\\DesignModel_Exp\\windows\\x86\\debug\\src\\main.cpp.obj", "src\\main.cpp"],
-  "file": "src\\main.cpp"
-}]
+  {
+    "directory": "e:\\CollegeLearningRepo\\DesignModel_Exp",
+    "arguments": [
+      "clang.exe",
+      "-c",
+      "-Qunused-arguments",
+      "-m32",
+      "-g",
+      "-O0",
+      "-std=gnu++20",
+      "-o",
+      "build\\.objs\\DesignModel_Exp\\windows\\x86\\debug\\src\\main.cpp.obj",
+      "src\\main.cpp"
+    ],
+    "file": "src\\main.cpp"
+  }
+]
